@@ -1,4 +1,3 @@
-FROM gcc:latest
-COPY main.c .
-RUN gcc -o main main.c
-CMD ["./main"]
+FROM php:7.4-apache
+COPY . /var/www/html/
+EXPOSE 80
